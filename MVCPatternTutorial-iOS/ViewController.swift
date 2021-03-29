@@ -8,7 +8,9 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    let person = Person(firstName: "jo", lastName: "ha", age: 25, location: Location(city: "seoul"))
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -18,6 +20,7 @@ class ViewController: UIViewController {
            super.viewDidLayoutSubviews()
            let myView = ExampleView(frame: CGRect(x:0, y:0, width: 100, height: 100))
            myView.center = view.center
+        myView.configure(with: "\(person.firstName)")
            view.addSubview(myView)
        }
 }
