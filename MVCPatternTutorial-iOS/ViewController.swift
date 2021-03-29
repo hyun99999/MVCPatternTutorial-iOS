@@ -14,6 +14,11 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-//develop
+    override func viewDidLayoutSubviews() {
+           super.viewDidLayoutSubviews()
+           let myView = ExampleView(frame: CGRect(x:0, y:0, width: 100, height: 100))
+           myView.center = view.center
+           view.addSubview(myView)
+       }
 }
 
