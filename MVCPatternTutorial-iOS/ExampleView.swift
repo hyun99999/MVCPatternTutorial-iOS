@@ -27,6 +27,9 @@ class ExampleView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    public func configure(with name: String){
+        label.text = name
+    }
     
     override func layoutSubviews() {
         super.layoutSubviews()
